@@ -1,0 +1,13 @@
+
+
+
+nav .navbar-nav li a{
+  color: white !important;
+  margin-right:30px;
+  }
+nav .navbar-nav li a:hover{
+  color: gold !important;
+  }
+i{
+  margin-right:10px
+}
