@@ -29,7 +29,7 @@ include_once "navbar.php";
 <body  ng-app="app" ng-controller="appController as vm">
 
 
-	<div class="entete-inscrit">
+	<div class="entete-inscrit animated fadeIn">
 		<div id="colgauche"class="col-sm-5">
 
 			<div class="register animated slideInLeft text-center">   

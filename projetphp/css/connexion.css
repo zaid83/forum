@@ -78,7 +78,7 @@ body {
         background: transparent;
         outline: none;
         border: none;
-        color: darkslateblue;
+        color: white;
         &::placeholder
           color: black;
           font-size: 1em;
@@ -93,7 +93,7 @@ body {
       border: none;
       border-radius: 25px;
       text-transform: uppercase;
-      background: darkslateblue;
+      background: #D32F2F;
       color: white;
       font-weight: 800;
       cursor: pointer;

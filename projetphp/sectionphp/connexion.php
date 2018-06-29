@@ -28,7 +28,7 @@ include_once "navbar.php";
 <body  ng-app="app" ng-controller="appController as vm">
 
 
-	<div id="entete-connexion">
+	<div id="entete-connexion" class="animated fadeIn">
 		
 		<div id="coldroite" class="col-sm-5 offset-sm-7">
 
