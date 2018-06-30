@@ -26,7 +26,7 @@ include_once "navbar.php";
 </head>
 
 
-<body  ng-app="app" ng-controller="appController as vm">
+<body  ng-app="app" ng-controller="appController as vm" class="container">
 
 
 	<div class="entete-inscrit animated fadeIn">
