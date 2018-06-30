@@ -26,14 +26,14 @@ body {
 /*Formulaire */
 #colgauche{
   background-color: black;
-  padding-bottom:15%;
+  padding-bottom:1%;
   border-right:3px solid orangered;
 }
 
 
 .register
 {
-  padding:100px;
+  padding:10px;
 }
 
 .register h1 {
