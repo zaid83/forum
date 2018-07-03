@@ -9,8 +9,9 @@
 }
 
 
-body {
-  background-color:black;
+.navbar img {
+  width:150px;
+  border-radius:20px;
 }
 #entete-connexion {
   background-image:url('../assets/img/jimmy2.jpg');
@@ -28,8 +29,8 @@ body {
 #coldroite{
   background-color: black;
   padding-bottom:15%;
-  border-left:3px solid orangered;
-  border-right:3px solid orangered;
+  border-left:3px solid white;
+  border-right:3px solid white;
 }
 
 .login

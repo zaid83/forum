@@ -1,5 +1,17 @@
-
-
+body {
+	background-color:black;
+}
+.container {
+	border-right:2px solid white;
+	border-left:2px solid white;
+}
+.navbar {
+ background: linear-gradient(to right,#000000, #181f22);
+}
+.navbar img {
+  width:150px;
+  border-radius:20px;
+}
 
 nav .navbar-nav li a{
   color: white !important;
