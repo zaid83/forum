@@ -1,53 +1,36 @@
-
-@font-face {
- font-family: "Gorillaz";
- src: url("../assets/fonts/gorillaz_1.ttf") format("TrueType");
+#inscription-content {
+	background-image: url('../assets/img/damso3.png');
+  background-repeat: no-repeat;
+  
+	height:auto;
+ 
 }
-
-
-
-body {
-  background-color:black;
-}
-
-
-
-.entete-inscrit {
-  background-image:url('../assets/img/gorillaz2.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  color:black;
-  height:auto;
-}
-
-
-
 
 /*Formulaire */
-#colgauche{
-  background-color: black;
-  padding-bottom:1%;
-  border-right:3px solid white;
-   border-left:3px solid white;
+#coldroite{
+  background-color: transparent;
+  padding:%;
+  
+
 }
 
 
 .register
 {
-  padding:10px;
+  padding:40px;
 }
 
 .register h1 {
-	 font-family: "Gorillaz", sans-serif;
-  font-size:4em;
+	 font-family: 'Anton', sans-serif;
+  font-size:2em;
   color:white;
 }
 
 .form-element i {
-        color:firebrick;
+        color:orangered;
         position: absolute;
-        left: 20%;
-        transform: translate(-50%,-50%);
+        left: 18%;
+        transform: translate(-40%,-90%);
      }
 
     .form-element {
@@ -58,7 +41,7 @@ body {
       margin-left:0px;
       }
 
-      span {
+      .register span {
         display: inline-block;
         width: 20%;
         color: black;
@@ -97,6 +80,7 @@ body {
       color: white;
       font-weight: 800;
       cursor: pointer;
+      
 }
 
 /******* NG ********/

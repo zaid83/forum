@@ -1,14 +1,10 @@
 <?php 
-
-include "navbar.php";
-
+	include "navbar.php";
 ?>
-
-<html lang="fr">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Page d'inscription</title>
+	<title>Page de connexion</title>
 	<link rel="stylesheet" href="../css/connexion.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
@@ -28,11 +24,12 @@ include "navbar.php";
 <body  ng-app="app" ng-controller="appController as vm" class="container">
 
 
-	<div id="entete-connexion" class="animated fadeIn">
-		
-		<div id="coldroite" class="col-sm-5 offset-sm-7">
+	<div id="connexion-content">
 
-			<div class="login animated slideInRight text-center">   
+		
+		<div id="colgauche" class="col-sm-6">
+
+			<div class="login animated slideInLeft text-center">   
 
 
 
@@ -40,7 +37,7 @@ include "navbar.php";
 
 				<!-- FORMULAIRE -->
 
-				<form id="login" action="" method ="POST" name="login" novalidate autocomplete="off">
+				<form id="login" action="requete_connexion.php" method ="POST" name="login" novalidate autocomplete="off">
 
 					<div class="form-element">
 						<span><i class="fas fa-user"></i></span><input type="text" placeholder="Pseudo" name="pseudo" ng-model="vm.pseudo" required >
@@ -50,15 +47,15 @@ include "navbar.php";
 					</div>
 
 										<div class="form-element">
-						<span><i class="fas fa-lock"></i></span><input type="password" placeholder="Mot de passe" name="motdepasse" ng-model ="vm.password" minlength="4" required/>
+						<span><i class="fas fa-lock"></i></span><input type="password" placeholder="Mot de passe" name="motDePasse" ng-model ="vm.password" minlength="4" required/>
 					</div>
 
-					<div class="erreur" ng-messages="login.motdepasse.$error" ng-show="login.motdepasse.$touched">
+					<div class="erreur" ng-messages="login.motDePasse.$error" ng-show="login.motDePasse.$touched">
 						<p class="erreur" ng-message="required">Ce champ est obligatoire.</p>
 						<p class="erreur" ng-message="minlength">Le nom doit contenir au minimum 4 caractères.</p>
 					</div>
 
-					<button type="submit" class="btn-connexion" ng-disabled="login.$invalid">Se connecter</button>
+					<button name="connexionform" type="submit" class="btn-connexion" ng-disabled="login.$invalid">Se connecter</button>
 
 
 
@@ -66,4 +63,7 @@ include "navbar.php";
             </div>
 </div>
 </div>
+<?php include"info.php"; ?>
+
+
 </body>

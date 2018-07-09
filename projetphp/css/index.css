@@ -1,6 +1,15 @@
+body{
+	color:white;
+	 font-family: 'Anton', sans-serif;
+}
+
+
 .main-navbar {
 	margin-top:5px;
-background: linear-gradient(to right,#0f2535, #161720);
+	background-image:url('../assets/img/bluewave.jpg');
+	background-size:cover;
+	/*
+background: linear-gradient(to right,#0f2535, #063852);*/
 	padding-top:17px;
 	padding-bottom:8px;
 	border-radius:1px;
@@ -8,15 +17,31 @@ background: linear-gradient(to right,#0f2535, #161720);
 .list-navbar li {
 	display:inline;
 	margin-right:40px;
+	color:orange;
+	
+}
+.session-nav {
 	color:white;
+}
+.list-navbar a {
+	color:white;
+}
+.welcome {
+	padding-right:150px;
+}
+ a:hover {
+	color:gold;
+	text-decoration: none;
 }
 .forum-music img {
 	margin-top:5px;
+	
 }
 .forum-music{
 	position:relative;
 	margin-top:10px;
-	margin-bottom: 10px;
+	margin-bottom: 18px;
+	
 }
 .les-forums {
 	position:absolute;
@@ -35,7 +60,7 @@ top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 /* border:1px solid white;*/
-  
+  font-family: 'Anton', sans-serif;
   
   padding:10px;
  /*
@@ -47,16 +72,17 @@ top: 50%;
 	
   }
 .les-forums a{
-  color:white!important;
+  color:white !important;
   text-shadow: 2px 2px 2px black;
+	
  
   }
 
   .les-forums .nbdemessages{
-  color: orange !important;
+  color: #f0810f !important;
   }
   .les-forums .nbdesujets{
-  color: orange !important;
+  color: orangered !important;
   }
 
 .les-forums img {
@@ -78,4 +104,24 @@ top: 50%;
 	background: linear-gradient(to right,#0f2535, #161720);
 	border-radius:6px;
 	padding:2px;
+}
+#content-infos {
+	margin-top:20px;
+	font-size:0.8em;
+	background-color: #011a27;
+		padding:20px;
+	font-family: 'Arvo', serif;
+}
+#content-infos h6{
+	background-color: #f0810f;
+		padding:20px;
+	font-family: 'Anton', sans-serif;
+}
+.nbde {
+  
+	color:burlywood;
+}
+#socialmedia i {
+  padding:20px;
+	font-size:3em;
 }

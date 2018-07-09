@@ -1,36 +1,23 @@
-
-@font-face {
- font-family: "Gorillaz";
- src: url("../assets/fonts/gorillaz_1.ttf") format("TrueType");
-}
-@font-face {
- font-family: "AllAges";
- src: url("../assets/fonts/AllAges.ttf") format("TrueType");
-}
-
-
 .navbar img {
   width:150px;
   border-radius:20px;
 }
-#entete-connexion {
-  background-image:url('../assets/img/jimmy2.jpg');
-  background-repeat:no-repeat;
+
+#connexion-content {
+	background-image: url('../assets/img/beyonce.jpg');
+  background-repeat: no-repeat;
   background-size:cover;
-  color:black;
   height:auto;
+ 
 }
-
-
 
 
 /*Formulaire */
 
-#coldroite{
-  background-color: black;
+#colgauche{
+  background-color: transparent;
   padding-bottom:15%;
-  border-left:3px solid white;
-  border-right:3px solid white;
+
 }
 
 .login
@@ -39,17 +26,17 @@
 }
 
 .login h1 {
-	 font-family: "Gorillaz", sans-serif;
+	font-family: 'Anton', sans-serif;
 	margin-left:0px;
-  font-size:4em;
+  font-size:2em;
   color:white;
 }
 
 .form-element i {
-        color:firebrick;
+        color:orangered;
         position: absolute;
         left: 20%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-90%);
      }
 
     .form-element {
@@ -60,7 +47,7 @@
       margin-left:10px;
       }
 
-      span {
+        .login span {
         display: inline-block;
         width: 20%;
         color: black;
@@ -101,6 +88,14 @@
       cursor: pointer;
 }
 
+#content-infos span {
+
+        width: 100%;
+        
+}
+.number {
+  color:white;
+}
 /******* NG ********/
 
 

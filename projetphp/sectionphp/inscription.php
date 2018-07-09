@@ -1,10 +1,8 @@
 <?php 
 
-include_once "navbar.php";
+include "navbar.php";
 
 ?>
-
-<html lang="fr">
 
 <head>
 	<meta charset="UTF-8">
@@ -25,14 +23,12 @@ include_once "navbar.php";
 
 </head>
 
-
 <body  ng-app="app" ng-controller="appController as vm" class="container">
+	<div id="inscription-content">
 
+				<div id="coldroite"class="col-sm-6 offset-sm-6">
 
-	<div class="entete-inscrit animated fadeIn">
-		<div id="colgauche"class="col-sm-5">
-
-			<div class="register animated slideInLeft text-center">   
+			<div class="register animated slideInRight text-center">   
 
 
 
@@ -40,7 +36,7 @@ include_once "navbar.php";
 
 				<!-- FORMULAIRE -->
 
-				<form id="formulaire" action="requete_inscripton.php" method ="POST" name="inscription" novalidate autocomplete="off">
+				<form id="formulaire" action="requete_inscription.php" method ="POST" name="inscription" novalidate autocomplete="off">
 
 					<div class="form-element">
 						<span><i class="fas fa-id-card"></i></span><input type="text" placeholder="Nom" name="nom" ng-model="vm.nom" required ng-minlength="2" ng-maxlength="15">
@@ -103,15 +99,8 @@ include_once "navbar.php";
 			</div>
 
 		</div>
-
 	</div>
 
+<?php include"info.php"; ?>
 
-	
 </body>
-
-
-
-
-
-</html>
