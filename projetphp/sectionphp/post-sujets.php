@@ -3,10 +3,7 @@
 include_once "header.php";
 
 ?>
-<?php if(!isset($_SESSION['id'])) {
-  header("Location: connexion.php");
-}
-?>
+
 <html lang="fr">
 
 <head>
@@ -51,7 +48,7 @@ include_once "header.php";
 	<div id="banner-title" class="main-navbar text-center">
 	<h3>Nouveau Sujet</h3>	
 		</div>
-		<form action="requete_post_sujet.php"method="POST">
+		<form action="requete_sujet.php"method="POST">
 		  <table class="table table-striped">
       <tr>
          <th colspan="2">Nouveau Topic</th>
@@ -63,18 +60,39 @@ include_once "header.php";
       <tr>
          <td>Catégorie</td>
          <td>
-            <select>
-               <option>Presentation</option>
-               <option>Partage Musical</option>
-               <option>Creations</option>
+            <select name='id_categorie'>
+                
+                <?php
+                
+                try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=forum;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+                
+               $categorie = $bdd->query('SELECT * from categorie ');
+               while($donnees = $categorie->fetch()){
+                   ?>
+                <option value="<?php echo $donnees['id_categorie'];?>">
+                    <?php 
+                    echo $donnees['nom_categorie']; 
+                    ?>
+                </option>
+                <?php 
+               } 
+                
+                ?>
+               
+              
             </select>
          </td>
       </tr>
-<tr>
-         <td>Message</td>
-         <td><textarea name="tcontenu"></textarea></td>
-      </tr>
       <tr>
+          <input type="hidden" name="id" value="$_SESSION['id']">
+              </tr>
       <tr>
          <td colspan="2"><input type="submit" name="tsubmit" value="Poster le Topic" /></td>
       </tr>
@@ -82,7 +100,29 @@ include_once "header.php";
 </form>
 
  </div>
-<?php include"info.php"; ?>
+		<div id="infos" class="main-navbar text-center">
+	<h3><i class="far fa-edit"></i>Informations</h3>	
+		</div>
+	<div id="content-infos" >
+		<h6><i class="fas fa-calculator"></i>Statistiques</h6>
+		<br>
+		<div class="row">
+		<div class="col-sm-4">
+		<span class="nbde"> Nombre total de visites : </span> <span>1708</span>
+		<br>
+		<span class="nbde"> Nombre total de messages : </span> <span>188</span>
+		<br>
+		<span class="nbde"> Nombre total de sujets : </span> <span>48</span>
+		<br>
+		<span class="nbde"> Nombre total de membres : </span> <span>10</span>
+		<br>
+	</div>
+	    <div id="socialmedia" class="col-sm-8 text-center">
+		<i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-github"></i>
+          </div>
+      </div>
+
+	</div>
 
 
 

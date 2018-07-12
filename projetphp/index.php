@@ -85,23 +85,23 @@ catch (Exception $e)
 			<img id="img-presentation" class="img-fluid" src="assets/img/tupac.jpg">
 			<div class="caption text-center"><a href="sectionphp/presentation.php"> <h3>PRESENTATION</h3> </a>
 		<div class="nb-content">
-			<span class="nbdesujets">8 </span><span>sujets</span> / <span class="nbdemessages">20 messages</span>
+			<span class="nbdesujets">1 </span><span>sujets</span> / <span class="nbdemessages">0 messages</span>
 		</div>
 			</div>
 		</div>
 			<div class="col-sm-4 categories">
 			<img id="img-partage" class="img-fluid" src="assets/img/bobmarley2.jpg">
-			<div class="caption text-center"><a href="sectionphp/presentation.php"> <h3>PARTAGE MUSICAL</h3> </a>
+			<div class="caption text-center"><a href="sectionphp/partage_musical.php"> <h3>PARTAGE MUSICAL</h3> </a>
 				<div class="nb-content">
-<span class="nbdesujets">8 </span><span>sujets</span> / <span class="nbdemessages">20 messages</span>
+<span class="nbdesujets">0 </span><span>sujets</span> / <span class="nbdemessages">0 messages</span>
 </div>
 			</div>
 		</div>
 				<div class="col-sm-4 categories">
 			<img id="img-creation" class="img-fluid" src="assets/img/mj.jpg" >
-						<div class="caption text-center"><a href="sectionphp/presentation.php"> <h3>CREATIONS</h3> </a>
+						<div class="caption text-center"><a href="sectionphp/creations.php"> <h3>CREATIONS</h3> </a>
 							<div class="nb-content">
-<span class="nbdesujets">4 </span><span>sujets</span> / <span class="nbdemessages">10 messages</span>
+<span class="nbdesujets">0 </span><span>sujets</span> / <span class="nbdemessages">0 messages</span>
 </div>
 			</div>
 		</div>
@@ -151,3 +151,7 @@ catch (Exception $e)
 
 
 </body>
+
+<footer>
+	<p align="right"> &copy; Cynthia Zaïd Alexandre </p>
+	</footer>

@@ -8,7 +8,7 @@ include_once "header.php";
 
 <head>
 	<meta charset="UTF-8">
-	<title>Presentation-messages</title>
+	<title>Liste-messages</title>
 	<link rel="stylesheet" href="../css/presentation-message.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
@@ -35,7 +35,7 @@ include_once "header.php";
 
 	<div class="list-sujets-forum">
 	<div id="banner-title" class="main-navbar text-center">
-	<h3>Titre du sujet</h3>	
+	<h3><?php echo $_GET['titre_sujet'] ?></h3>	
 		</div>
 		  <table class="table table-striped">
     <thead>
@@ -46,32 +46,35 @@ include_once "header.php";
       </tr>
     </thead>
     <tbody>
+       <?php  
+                  
+                  try
+{
+  $bdd = new PDO('mysql:host=localhost;dbname=forum;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+                  
+                  $messages = $bdd->query('SELECT * FROM message INNER JOIN sujet ON sujet.id_sujet = message.id_sujet INNER JOIN membre ON membre.id_membre = message.id_membre WHERE message.id_sujet = '.$_GET['numero_du_sujet'].' ');
+                  
+                  while($donnees = $messages->fetch()){
+                  ?>
       <tr>
         <td class="text-center">
         	<img src="../assets/img/imusic.png" width="100">
-        	<p class="membres" href="">[membres]</p>
-        	<p class="statut"><b>Statut : </b> Admin</p>
-        <p class="date-inscription"><b>Inscrit depuis le</b> 28/06/2018 </p>
+        	<p class="membres" href=""><?= $donnees['pseudo']; ?></p>
+        
+        <p class="date-inscription"><b>Inscrit depuis le</b> <?= $donnees['date_inscription']; ?> </p>
 
         </td>
         <td>
-      <p class="content-mess">Bienvenue dans le forum CZA, Le forum de partage et de découvertes de musique </p>
+      <p class="content-mess"><?= $donnees['corp_message']; ?></p>
 </td>
       </tr>
 
-      <tr>
-        <td class="text-center">
-        	<img src="../assets/img/imusic.png" width="100">
-        	<p class="membres" href="">[membres]</p>
-        	<p class="statut"><b>Statut : </b> Admin</p>
-        <p class="date-inscription"><b>Inscrit depuis le</b> 28/06/2018 </p>
-
-        </td>
-        <td>
-      <p class="content-mess">Bienvenue dans le forum CZA, Le forum de partage et de découvertes de musique </p>
-</td>
-      </tr>
-            
+         <?php } ?>
 
     </tbody>
   </table>
@@ -79,14 +82,19 @@ include_once "header.php";
 	<div id="banner-title" class="main-navbar text-center">
 	<h3 >Nouveau message</h3>	
 		</div>
-		<form action="requete_post_message.php"method="POST">
+
+
+
+
+
+		<form action="requete_message.php?numero_du_sujet=<?php echo $_GET['numero_du_sujet']; ?>"method="POST">
 		  <table class="table table-striped">
       <tr>
          <th colspan="2">Nouveau Message</th>
       </tr>
 
          <td>Message</td>
-         <td><textarea name="mcontenu"></textarea></td>
+         <td><textarea name="corp_message"></textarea></td>
       </tr>
       
       <tr>
@@ -97,6 +105,7 @@ include_once "header.php";
 
  </div>
    </div>
+
 		<?php include"info.php"; ?>
 </body>
 </html>

@@ -24,7 +24,7 @@ include_once "header.php";
           <div class="sections-forum text-center">
        			<ul class="list-navbar">
 				<li><a href="presentation.php"><figure><img class="img-fluid rounded" src="../assets/img/tupac.jpg" width="80"><figcaption>Presentation</figcaption></figure></a></li>
-				<li><a href="partage-musical.php"><figure><img class="img-fluid rounded" src="../assets/img/bobmarley2.jpg" width="80"><figcaption>Partage musical</figcaption></figure></a></li>
+				<li><a href="partage_musical.php"><figure><img class="img-fluid rounded" src="../assets/img/bobmarley2.jpg" width="80"><figcaption>Partage musical</figcaption></figure></a></li>
 				<li><a href="creations.php"><figure><img class="img-fluid rounded" src="../assets/img/mj.jpg" width="80"><figcaption>Creations</figcaption></figure></a></li>	
 			</ul>
 
@@ -68,7 +68,7 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
                   
-                  $sujet = $bdd->query('SELECT * FROM sujet INNER JOIN membre ON sujet.id_membre = membre.id_membre WHERE id_categorie = 1 ');
+                  $sujet = $bdd->query('SELECT * FROM sujet INNER JOIN membre ON sujet.id_membre = membre.id_membre WHERE id_categorie = 3 ');
                   
                   while($donnees = $sujet->fetch()){
                   ?>
@@ -79,7 +79,7 @@ catch (Exception $e)
         <p class="date-sujet"><?php echo $donnees['date_heure_creation'] ; ?> </p>
 
         </td>
-        <td><span class="nbdereponses">2</span> 
+        <td><span class="nbdereponses">0</span> 
         	<span style="color:grey;">reponses</span></td>
         <td>
         par<a class="membre-sujet" href="">[<?php echo $donnees['pseudo']; ?>]</a>
