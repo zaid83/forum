@@ -28,7 +28,7 @@ $inserer->execute(array(
 
 
 
- header('Location: index.php');
+ header('Location: ../index.php');
   exit();
 
 ?>
